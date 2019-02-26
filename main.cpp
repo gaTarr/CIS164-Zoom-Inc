@@ -85,6 +85,7 @@ void playGame(player Player1)								//plays the game with the player informatio
 		
 		generateMonsters(Player1);									//sends to combat
 		
+		
 		roomWeapons(Player1);										//after combat in the new room there will be weapons to choose from
 		
 		do {													//decides which way the user will go to continue through the map, this will change when the search tree is done
@@ -122,7 +123,7 @@ void generateMonsters(player Player1)							//creates a random number of enemies
 void roomWeapons(player Player1)							//shows available weapons to pick up in the room
 {															//this will be more random and have more variety
 	string weaponChoice;
-	int caseWeapons = (rand()%4+1);							//random number for weapons, sometimes you dont get to choose
+	int caseWeapons = (rand()%3+1);							//random number for weapons, sometimes you dont get to choose
 	switch(caseWeapons) {
 		case 1: 
 			cout << "Available Weapons to pick up: " << endl;
@@ -151,6 +152,8 @@ void roomWeapons(player Player1)							//shows available weapons to pick up in t
 				cout << "You have dropped " << currentWeapon.weaponName << " and picked up " << weaponChoice << endl;
 				currentWeapon = sword;
 			}
+		default:
+			cout << "There are no new weapons here" << endl;
 			break;
 	}
 }
