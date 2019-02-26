@@ -152,7 +152,8 @@ void roomWeapons(player Player1)							//shows available weapons to pick up in t
 				cout << "You have dropped " << currentWeapon.weaponName << " and picked up " << weaponChoice << endl;
 				currentWeapon = sword;
 			}
-		default:
+			break;
+		case 3:
 			cout << "There are no new weapons here" << endl;
 			break;
 	}
